@@ -1,0 +1,80 @@
+.content-container {
+    color: lightgray;
+    background-image: url("../../assets/binner-bg.jpg");
+    padding: calc(40px + 2rem) 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 600px;
+    text-align: center;
+
+}
+
+.Card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+}
+
+
+ .Card {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    justify-content: baseline;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20%;
+    padding: 1rem;
+    text-decoration: none;
+    color: lightgray;
+    flex-shrink: 1;
+    transition: all 0.5s;
+
+    animation-name: growshrink;  
+    animation-duration: 2s;
+
+    
+}
+
+.Card:hover {
+    width: 260px;
+}
+
+.Card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.Card p {
+    font-weight: bold;
+}
+
+@media screen and (max-width:350px) {
+
+    .Card-container {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+}
+
+@keyframes growshrink {
+    0% {
+        opacity: 0%;
+        scale: 0%;
+        margin: 70% 20%;
+        
+    }
+    50% {
+        opacity: 50%;
+        scale: 150%;
+
+    }
+  }

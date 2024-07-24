@@ -1,0 +1,11 @@
+.foot-container {
+    height: 300px;
+    background-color: rgb(12, 12, 32);
+    color: lightgray;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+

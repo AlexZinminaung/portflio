@@ -1,0 +1,51 @@
+.nav-container {
+    width: 100%;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-around;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    height: 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.nav-container .nav-btn {
+    border: none;
+    padding: 0.5rem;
+    background-color: transparent;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: all .5s;
+    color: lightgray;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 600px){
+    .nav-btn:hover {
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .nav-container .nav-btn {
+        font-size: 0.8rem;
+    }
+}
+
+.nav-container .about {
+    color: #3cd5ff;
+    font-weight: bold;
+}
+
+
+.nav-container .projects {
+    color: #3cd5ff;
+    font-weight: bold;
+}
+
+.nav-container .content {
+    color: #3cd5ff;
+    font-weight: bold;
+}

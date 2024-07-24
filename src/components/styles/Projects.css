@@ -1,0 +1,116 @@
+.projects-container {
+    background-image: url('../../assets/hero-bg.jpg');
+    background-position: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: lightgray;
+    padding: calc(40px + 2rem) 0.5rem;
+    gap: 2rem;
+
+}
+
+.projects-container .project-box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 0.5rem 20%;
+    animation-name: displayProject;  
+    animation-duration: 2s;
+}
+
+.project-box-container .project-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 180px;
+    padding: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20%;
+    transition: all 0.5s;
+
+    animation-name: grow;
+    animation-timeline: view(block 80% 10%);
+    animation-fill-mode: both;
+    animation-duration: 1ms; /* Firefox requires this to apply the animation */
+    animation-timing-function: linear;
+
+
+
+}
+
+
+.project-box-container .project-box:hover {
+    width: 190px;
+}
+
+.project-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-box-container a {
+    text-decoration: none;
+    color: lightgray;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes grow {
+    from {
+        opacity: 0;
+        scale: 0.5;
+
+    }
+
+    to {
+        opacity: 1;
+    }
+    
+}
+
+
+@keyframes displayProject {
+    0% {
+        opacity: 0%;
+        scale: 0%;
+
+
+    }
+    50% {
+        opacity: 50%;
+
+
+    }
+
+    75% {
+        scale: 110%;
+    }
+  }
+
+@media screen and (max-width: 700px) {
+    .projects-container .project-box-container {
+        padding-left: 5%;
+        padding-right: 5%;
+
+
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .project-box-container .project-box {
+        width: 80%;
+        
+
+    }
+
+    .project-box-container .project-box:hover {
+        width: 85%;
+    }
+}
